@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register - Vacation Rentals</title>
-  <link rel="stylesheet" href="register.css">
+  <title>Login - Vacation Rentals</title>
+  <link rel="stylesheet" href="login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -19,32 +19,26 @@
         <li><a href="index.html#Home">Home</a></li>
         <li><a href="index.html#service">Service</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#bookingForm">Book Now</a></li>
+        <li><a href="index.html#book-Form">Book Now</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Register Section -->
+  <!-- Login Section -->
   <section class="auth-section">
-    <form action="" class="register" id="register">
-      <h2>Create Account</h2>
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" placeholder="Enter your name" required>
-
+    <form action="" class="login" id="login">
+      <h2>Login</h2>
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="text" id="email" placeholder="Enter your Email" required>
 
       <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter your password" required>
+      <input type="password" id="password" placeholder="Enter your Password" required>
 
-      <label for="confirm">Confirm Password</label>
-      <input type="password" id="confirm" placeholder="Confirm your password" required>
-
-      <button type="submit">Register</button>
+      <button type="submit">Login</button>
     </form>
-    <p>Already have an account? <a href="login.html">Login</a></p>
+    <p>Don't have an account? <a href="RegisterForm.html">Sign up</a></p>
   </section>
 
-  <script src="main.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>

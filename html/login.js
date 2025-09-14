@@ -15,7 +15,7 @@ const loginForm = document.querySelector("#login");
     );
 
     if (user) {
-      window.location.href = "Home.html"; // ✅ redirection works
+      window.location.href = "index.html"; // ✅ redirection works
     } else {
       alert("Invalid credentials");
     }
