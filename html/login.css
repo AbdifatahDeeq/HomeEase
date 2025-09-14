@@ -1,0 +1,173 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #0a1a2f, #1b2838);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(7, 13, 37, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Menu */
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 11;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0,0,0,0.95);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: right;
+  }
+
+  .menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Login Form Section */
+.auth-section {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.login {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.login h2 {
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+  display: block;
+  color: #ddd;
+}
+
+.login input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.login button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0056b3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login button:hover {
+  background: #e6b800;
+}
+
+.auth-section p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.auth-section a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-section a:hover {
+  text-decoration: underline;
+}
