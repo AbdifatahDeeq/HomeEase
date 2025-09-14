@@ -1,11 +1,11 @@
 # HomeEase-Rentals
 HomeEase Rentals
 
-<!-- Overview -->
+Overview 
 HomeEase Rentals is a modern, responsive web application that allows users to explore, book, and list vacation rental homes. The website aims to provide a seamless experience for both travelers looking for short-term stays and homeowners wanting to rent out their properties.
 The platform focuses on luxury, convenience, and user-friendliness, featuring elegant design, interactive forms, and essential features for booking and listing homes.
 
-<!-- Features -->
+ Features 
 
 1. Home Page
 Beautiful banner showcasing a luxury vacation home.
@@ -58,7 +58,7 @@ Social media links (Facebook, Instagram, Twitter)
 Quick access links: About Us, Login, Register
 Copyright information
 
-<!-- Technologies Used -->
+Technologies Used 
 
 HTML5 & CSS3 for structure and styling
 JavaScript for interactive functionality
@@ -69,7 +69,7 @@ EmailJS for email-based interactions
 Emoji Picker for enhanced user interaction
 Responsive Design for mobile and desktop devices
 
-<!-- How to Use -->
+How to Use 
 
 Open the website link with the browser.
 Use the navigation bar to browse through sections.
@@ -78,8 +78,7 @@ Fill out the booking form to reserve a home.
 The system will trigger an API call to notify the admin and send an auto-reply confirmation to the user.
 Homeowners can add new properties via the listing form in the "Service" section.
 
-
-<!-- Future Enhancements -->
+Future Enhancements
 
 Full backend integration (database + authentication).
 Advanced search and filter options for properties.
@@ -88,6 +87,6 @@ Push notifications for real-time booking updates.
 User dashboards for managing bookings and listings.
 
 
-<!-- Author -->
+Author
 Abdifatah Deq
 © 2025. All rights reserved.
