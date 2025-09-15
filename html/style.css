@@ -197,6 +197,10 @@ button:hover {
   padding-bottom: 10px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth; /* enables smooth snapping */
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  
 }
 
 .house {
