@@ -4,9 +4,9 @@ const toggleMenu = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 const links = document.querySelectorAll("a");
 
-toggleMenu.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+toggleMenu.addEventListener("click", (e) => {
+  menu.classList.toggle("active")
+})
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
@@ -52,7 +52,7 @@ if (registerForm) {
     localStorage.setItem("users", JSON.stringify(users));
 
     alert("Registration successful!");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   });
 }
 

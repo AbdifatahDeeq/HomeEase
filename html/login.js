@@ -2,6 +2,22 @@ const loginEmail = document.getElementById("email");
 const loginPassword = document.getElementById("password");
 const loginForm = document.querySelector("#login");
 
+const toggleMenu = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+const links = document.querySelectorAll("a")
+
+toggleMenu.addEventListener("click", (e) => {
+  menu.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+});
+
+
+
 
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -15,7 +31,7 @@ const loginForm = document.querySelector("#login");
     );
 
     if (user) {
-      window.location.href = "index.html"; // ✅ redirection works
+      window.location.href = "Home.html"; // ✅ redirection works
     } else {
       alert("Invalid credentials");
     }

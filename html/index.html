@@ -3,213 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeEase Rentals</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Login - Vacation Rentals</title>
+    <link rel="stylesheet" href="login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
-    <!-- EmailJS SDK -->
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          publicKey: "Yjb_7QfW2cb5Q8Emd",
-        });
-      })();
-    </script>
   </head>
-
   <body>
-    <!-- Background Image -->
-    <div class="back">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1754269336381-0ebd106e1142?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0"
-        alt="Background"
-      />
-    </div>
-    <div class="overlay"></div>
-
     <!-- Navigation -->
     <nav class="nav-items">
-      <div class="brand" id="Home">Vacation Rental Houses</div>
-
-      <!-- Hamburger Icon -->
+      <div class="brand">HomeEase Rentals</div>
       <div class="menu-toggle" id="menu-toggle">
         <i class="fas fa-bars"></i>
       </div>
-
-      <!-- Menu -->
       <div class="menu" id="menu">
         <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#book-Form">Book Now</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="index.html#Home">Home</a></li>
+          <li><a href="index.html#service">Service</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#book-Form">Book Now</a></li>
         </ul>
       </div>
     </nav>
 
-    <div class="container">
-      <!-- Banner -->
-      <div class="banner">
-        <div class="banner-des">
-          <h1>Experience comfort</h1>
-          <h3>Luxury stays or rent your home with ease.</h3>
-          <button class="login">
-            <a href="login.html" class="btn">Login</a>
-          </button>
-          <p>Don't have an account?</p>
-          <button><a href="RegisterForm.html" class="btn">Sign up</a></button>
-        </div>
+    <!-- Description Section -->
+    <section class="auth-section">
+      <p>
+        HomeEase Rentals is a modern and reliable housing service dedicated to
+        making the process of finding and living in a home simple and
+        stress-free. We connect tenants with quality properties that suit a
+        variety of lifestyles and budgets, while also giving homeowners the
+        opportunity to rent out their houses with ease and confidence.
+      </p>
+
+      <!-- Houses -->
+      <div class="house">
         <img
-          src="https://plus.unsplash.com/premium_photo-1687578396401-4afc781d6085?w=900&auto=format&fit=crop&q=60"
-          alt="Vacation Banner"
+          src="https://media.istockphoto.com/id/2175987265/photo/lease-rental-and-selling-home-real-estate-agent-manager-smile-holding-key-for-new-owner-rent.webp?a=1&b=1&s=612x612&w=0&k=20&c=bPeMxvnxJbcE8f4Ug-Ykgu3-FmIao_3Xiu01YS9c__I="
+          alt="House 1"
         />
-        <p id="Reserve">
-          Reserve your ideal home-away-from-home with us and enjoy a memorable
-          stay.
-        </p>
-      </div>
-
-      <!-- Booking Section -->
-      <section class="booking-wrapper" id="book-Form">
-        <div class="booking-section">
-          <form id="bookingForm" class="bookingForm">
-            <h2>Book a Room</h2>
-
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="start-date">Booking Date:</label>
-            <input type="date" id="start-date" name="start-date" />
-
-            <label for="end-date">Last Date:</label>
-            <input type="date" id="end-date" name="end-date" />
-
-            <label for="room">Choose Room:</label>
-            <select id="room" required name="room">
-              <option value="">--Select--</option>
-              <option>Short term settlement</option>
-              <option>Long term settlement</option>
-              <option>rent your own house</option>
-            </select>
-
-            <button type="submit" id="">Book Now</button>
-            
+        <div class="house-desc">
+          At HomeEase Rentals, we offer seamless short-term and long-term
+          housing solutions. Property owners can easily upload their homes for
+          rent, while tenants can find quality rentals tailored to their
+          needs—fast, reliable, and stress-free.
+          <form action="" class="login" id="login">
+            <h2>Wellcome to Login</h2>
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your Password"
+              required
+            />
+            <button type="submit">Login</button>
+            <p>
+              Don't have an account? <a href="RegisterForm.html">Sign up</a>
+            </p>
           </form>
         </div>
-        <div class="booking-image">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&auto=format&fit=crop&q=60"
-            alt="Booking Side Image"
-          />
-        </div>
-      </section>
-
-      <!-- Houses Section -->
-      <section class="houses">
-        <div class="house">
-          <img
-            src="https://images.unsplash.com/photo-1639060589553-77c8c2227ac5?w=900&auto=format&fit=crop&q=60"
-            alt="House 1"
-          />
-          <div class="house-desc">
-            🛏️ Spacious Bedrooms: Queen & king-sized beds with fresh linens.<br />
-            🍳 Fully Equipped Kitchen: Modern appliances & cookware.<br />
-            🛋️ Cozy Living Room: Smart TV, Wi-Fi & comfy seating.
-          </div>
-        </div>
-
-        <div class="house">
-          <img
-            src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=900&auto=format&fit=crop&q=60"
-            alt="House 2"
-          />
-          <div class="house-desc">
-            🌅 Balcony with mountain views.<br />
-            🚗 Free parking included.<br />
-            🏊 Swimming pool & gym access.
-          </div>
-        </div>
-
-        <div class="house">
-          <img
-            src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&auto=format&fit=crop&q=60"
-            alt="House 3"
-          />
-          <div class="house-desc">
-            📍 Prime location near shops & restaurants.<br />
-            🌍 Perfect for long-term stays.<br />
-            💻 High-speed internet for remote work.
-          </div>
-          
-        </div>
-          <div class="house">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG91c2VzfGVufDB8fDB8fHww"
-            alt="House 1"
-          />
-          <div class="house-desc">
-            🛏️ Spacious Bedrooms: Queen & king-sized beds with fresh linens.<br />
-            🍳 Fully Equipped Kitchen: Modern appliances & cookware.<br />
-            🛋️ Cozy Living Room: Smart TV, Wi-Fi & comfy seating.
-          </div>
-        </div>
-
-     
-      </section>
-
-      <!-- Highlighted House -->
-      <section class="highlighted-house" id="service">
-        <div class="house-info">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&auto=format&fit=crop&q=60"
-            alt="Beachside Vacation Home"
-          />
-        </div>
-        <div class="house-desc">
-          <h2>Would prefer to rent your house </h2>
-
-       <!-- add your rental house  -->
-        <form id="addNewhome">
-  <input type="url" id="imageUrl" placeholder="Image URL" required />
-  <textarea id="description" placeholder="Enter house description" required> </textarea>
-  <emoji-picker id="emojiPicker"></emoji-picker>
-  <button type="submit">Add House</button>
-</form>
-
-        </div>
-      </section>
-
-      <!-- About -->
-      <section class="about" id="about">
-        <p>
-          At Vacation Rental Houses we believe travel should be as seamless as
-          it is inspiring.<br />
-          That’s why we connect guests with handpicked luxury stays while making
-          it simple and stress-free for homeowners to rent their properties.<br /><br />
-          For homeowners, we make hosting effortless.<br />
-          From marketing your property to managing bookings, we take the hassle
-          out of renting so you can enjoy peace of mind and steady
-          income—without the stress.<br /><br />
-          Our mission is simple: Luxury for guests. Ease for hosts.
-        </p>
-        <img
-          src="https://plus.unsplash.com/premium_photo-1664300969611-f3745a737234?w=700&auto=format&fit=crop&q=60"
-          alt="About us"
-        />
-      </section>
-    </div>
-
-    <!-- Footer -->
+      </div>
+    </section>
     <footer class="footer">
       <p>&copy; 2025 Abdifatah Deq. All rights reserved.</p>
       <p>Follow us on</p>
@@ -219,11 +81,10 @@
         <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
       </p>
       <p>
-        <a href="#about">About Us</a> | <a href="login.html">Login</a> |
+        <a href="#about">About Us</a> | <a href="index.html">Login</a> |
         <a href="register.html">Register</a>
       </p>
     </footer>
-
-    <script src="main.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
