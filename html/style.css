@@ -202,7 +202,7 @@ button:hover {
 .house {
   flex: 0 0 auto; /* makes houses stay side by side */
   width: 300px;   /* fixed width so they snap properly */
-  scroll-snap-align: start;
+  scroll-snap-align: start; /*scrollin*/
   background-color: white;
   color: black;
 }
