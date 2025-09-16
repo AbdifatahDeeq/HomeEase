@@ -113,6 +113,8 @@ body {
   padding: 10px 60px;
   margin: 20px;
   font-weight: bold;
+  border: none;
+  box-sizing: border-box;
 }
 
 .banner img {
