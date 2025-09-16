@@ -311,6 +311,9 @@ form button:hover {
 
 /* Mobile Fixes */
 @media (max-width: 900px) {
+  body{
+    overflow-x: hidden;
+  }
   .menu {
     position: absolute;
     top: 60px;
