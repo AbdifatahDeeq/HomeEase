@@ -313,11 +313,11 @@ form button:hover {
   .menu {
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 10px;
     background: rgba(0,0,0,0.95);
     border-radius: 10px;
     padding: 15px;
-    width: 200px;
+    width: 150px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -327,7 +327,7 @@ form button:hover {
   .menu ul {
     flex-direction: column;
     gap: 15px;
-    text-align: right;
+    text-align: left;
   }
 
   .menu.active {
