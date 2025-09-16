@@ -153,27 +153,23 @@ body {
   gap: 20px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
+
 
 label {
   font-weight: bold;
   margin-bottom: 0.3rem;
   color: #ddd;
 }
-
+.bookingForm
 input,
 select,
 button {
   padding: 0.8rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
   border-radius: 10px;
   outline: none;
   transition: all 0.3s;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
@@ -186,6 +182,7 @@ button {
 button a {
   color: white;
   text-decoration: none;
+  box-shadow: none;
 }
 button:hover {
   background: #e6b800;
@@ -353,6 +350,10 @@ form button:hover {
     margin: 2px;              
     text-align: center;
     border-radius: 8px;      
+  }
+   .banner-des bottom{
+    box-shadow: none;
+    border-bottom: none;
   }
 
   .banner img {
