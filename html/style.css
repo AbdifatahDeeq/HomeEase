@@ -310,7 +310,7 @@ form button:hover {
 }
 
 /* Mobile Fixes */
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   body{
     overflow-x: hidden;
   }
@@ -391,13 +391,23 @@ select {
     border-radius: 10px;
 
   }
+   img{
+    width: 100%;
+  }
 
   .about {
     flex-direction: column;
     text-align: center;
     margin: 20px;
   }
+   .about img{
+    width: 100%;
+    padding: 5px;
+   }
   .highlighted-house {
     margin: 5px auto;
+  }
+  .highlighted-house img{
+    width: 100%;
   }
 }
