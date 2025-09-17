@@ -377,7 +377,7 @@ form button:hover {
   input[type="text"],
 input[type="date"],
 select {
-  width: 100%;
+ max-width: 100%;
   padding: 5px;
   margin: 5px 0;
   border-radius: 5px;
@@ -391,6 +391,14 @@ select {
     border-radius: 10px;
 
   }
+   .about img {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    margin: 1px;
+    padding: 0;
+
+  }
    img{
     width: 100%;
   }
@@ -402,12 +410,78 @@ select {
   }
    .about img{
     width: 100%;
-    padding: 5px;
+    padding: 10px;
    }
   .highlighted-house {
-    margin: 5px auto;
+    margin: 20px auto;
+    width: 95%;
+    border-radius: 10px;
+
   }
   .highlighted-house img{
+   max-width: 100%;
+  }
+  .footer{
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu ul {
+    gap: 20px;
+  }
+
+  .banner-des {
+    font-size: 16px;
+    top: 20%;
+    padding: 15px;
+    max-width: 80%;
+  }
+
+  .booking-wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .bookingForm{
     width: 100%;
+    margin-left: 20%;
+  }
+
+  .houses {
+    gap: 20px;
+   display: flex;
+    padding: 30px;
+    width: 100%;
+  }
+
+  .house {
+    width: 50%; 
+    margin: 10px;
+    padding: 10px;
+
+  }
+  .house-desc{
+    width: 100%;
+    margin-left: 20%;
+
+   
+  }
+  img{
+    width: 100%;
+    height: auto;
+  };
+  
+  .about {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+
+  }
+
+  .about img {
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    margin: 10px;
+
   }
 }
