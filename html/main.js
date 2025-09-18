@@ -139,12 +139,13 @@ function houselist(house) {
   const btn = document.createElement("button");
   btn.classList.add("house-desc");
   btn.textContent = "Apply Now";
-  btn.addEventListener("click", (e) => {
+  applyButtons.forEach((button) => {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
-      alert(
-        "Thank you for the application! You will receive information about the object soon."
-      );
-    });
+      alert("Thank you for the application! You will receive information about the object soon.");
+        
+    })
+  })
   
   // Select all buttons with the class "apply"
   const applyButtons = document.querySelectorAll(".apply");
