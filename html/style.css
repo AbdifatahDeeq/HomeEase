@@ -433,6 +433,9 @@ form button:hover {
   .highlighted-house img{
    max-width: 100%;
   }
+  #addNewhome{
+    width: 100%;
+  }
   .footer{
     max-width: 100%;
   }
