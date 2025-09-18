@@ -228,6 +228,20 @@ button:hover {
   font-size: 15px;
   line-height: 1.6;
 }
+.house button{
+    background: #eff0f3;
+  color: black;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  left: 10%;
+ padding: 5px;
+ bottom: 2px;
+ bottom: 10px;
+}
+.house button:hover{
+    background: #0077ff;
+}
 
 /* Highlighted House */
 .highlighted-house {

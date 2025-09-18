@@ -120,24 +120,28 @@
           <img
             src="https://images.unsplash.com/photo-1639060589553-77c8c2227ac5?w=900&auto=format&fit=crop&q=60"
             alt="House 1"
-          />
+          /> 
           <div class="house-desc">
             🛏️ Spacious Bedrooms: Queen & king-sized beds with fresh linens.<br />
             🍳 Fully Equipped Kitchen: Modern appliances & cookware.<br />
-            🛋️ Cozy Living Room: Smart TV, Wi-Fi & comfy seating.
+            🛋️ Cozy Living Room: Smart TV, Wi-Fi & comfy seating. 
           </div>
+         <button class="apply" id="apply">Apply Now</button>
         </div>
 
         <div class="house">
           <img
             src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=900&auto=format&fit=crop&q=60"
-            alt="House 2"
+            alt="House 2" 
           />
+          
+
           <div class="house-desc">
             🌅 Balcony with mountain views.<br />
             🚗 Free parking included.<br />
-            🏊 Swimming pool & gym access.
+            🏊 Swimming pool & gym access.  
           </div>
+       <button class="apply" id="apply">Apply Now</button>
         </div>
 
         <div class="house">
@@ -145,23 +149,27 @@
             src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&auto=format&fit=crop&q=60"
             alt="House 3"
           />
+          
           <div class="house-desc">
             📍 Prime location near shops & restaurants.<br />
             🌍 Perfect for long-term stays.<br />
-            💻 High-speed internet for remote work.
+            💻 High-speed internet for remote work. 
           </div>
-          
+           <button class="apply" id="apply">Apply Now</button>
         </div>
           <div class="house">
           <img
             src="https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG91c2VzfGVufDB8fDB8fHww"
             alt="House 1"
           />
+         
           <div class="house-desc">
             🛏️ Spacious Bedrooms: Queen & king-sized beds with fresh linens.<br />
             🍳 Fully Equipped Kitchen: Modern appliances & cookware.<br />
             🛋️ Cozy Living Room: Smart TV, Wi-Fi & comfy seating.
+        
           </div>
+              <button class="apply" id="apply">Apply Now</button>
         </div>
 
      
@@ -179,10 +187,17 @@
           <h2>Would you prefer to rent your house </h2>
 
        <!-- add your rental house  -->
-        <form id="addNewhome">
-  <input type="url" id="imageUrl" placeholder="Image URL" required />
-  <textarea id="description" placeholder="Enter house description" required> </textarea>
+<form id="addNewhome">
+  
+  <input type="url" id="imageUrl" placeholder="Image URL (optional)" />
+
+  <!-- Option 2: Upload from PC -->
+  <input type="file" id="fileUpload" accept="image/*" />
+
+  <!-- Description + emoji picker -->
+  <textarea id="description" placeholder="Enter house description" required></textarea>
   <emoji-picker id="emojiPicker"></emoji-picker>
+
   <button type="submit">Add House</button>
 </form>
 

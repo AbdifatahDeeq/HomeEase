@@ -5,8 +5,8 @@ const menu = document.getElementById("menu");
 const links = document.querySelectorAll("a");
 
 toggleMenu.addEventListener("click", (e) => {
-  menu.classList.toggle("active")
-})
+  menu.classList.toggle("active");
+});
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
@@ -92,7 +92,7 @@ Room: ${roomInput.value}`);
 
     bookingForm.reset();
   });
-}//("service_putdn59", "template_2serv55", 
+} //("service_putdn59", "template_2serv55",
 
 document.getElementById("bookingForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -116,11 +116,14 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
     .catch((error) => console.error("EmailJS error:", error));
 });
 const addForm = document.getElementById("addNewhome");
-const rentalHouse = document.querySelector(".houses");
-const emojiPicker = document.getElementById("emojiPicker");
+const fileInput = document.getElementById("fileUpload");
+const urlInput = document.getElementById("imageUrl");
 const descriptionInput = document.getElementById("description");
+const emojiPicker = document.getElementById("emojiPicker");
+const rentalHouse = document.querySelector(".houses");
+const apply = document.querySelectorAll("#apply");
 
-// Function to create and render a house element
+// Render a house card
 function houselist(house) {
   const addHouse = document.createElement("div");
   addHouse.classList.add("house");
@@ -131,54 +134,71 @@ function houselist(house) {
 
   const descrip = document.createElement("div");
   descrip.classList.add("house-desc");
+  descrip.textContent = house.description;
 
-  // Split description into lines
-  const lines = house.description.split("\n");
+  const btn = document.createElement("button");
+  btn.classList.add("house-desc");
+  btn.textContent = "Apply Now";
+  btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert(
+        "Thank you for the application! You will receive information about the object soon."
+      );
+    });
+  
+  // Select all buttons with the class "apply"
+  const applyButtons = document.querySelectorAll(".apply");
 
-  // Add custom emojis for the first three lines
-  const emojis = ["🛏️", "🍳", "🛋️"];
-  const formattedDesc = lines
-    .map((line, index) =>
-      line.trim() ? `${emojis[index] || "📍"} ${line}` : ""
-    )
-    .join("<br>");
-
-  descrip.innerHTML = formattedDesc;
+  applyButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert(
+        "Thank you for the application! You will receive information about the object soon."
+      );
+    });
+  });
 
   addHouse.appendChild(img);
   addHouse.appendChild(descrip);
   rentalHouse.appendChild(addHouse);
+  addHouse.appendChild(btn);
 }
 
-// Load houses from localStorage on page load
-function loadHouses() {
+// Handle form submit
+addForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let imageUrl = urlInput.value;
+
+  // If user uploaded a file, override the URL with local preview
+  if (fileInput.files[0]) {
+    imageUrl = URL.createObjectURL(fileInput.files[0]);
+  }
+
+  const newHouse = {
+    image: imageUrl,
+    description: descriptionInput.value,
+  };
+
+  houselist(newHouse);
+
+  // Save to localStorage
   const savedHouses = JSON.parse(localStorage.getItem("houses")) || [];
-  savedHouses.forEach(houselist);
-}
+  savedHouses.push(newHouse);
+  localStorage.setItem("houses", JSON.stringify(savedHouses));
+
+  addForm.reset();
+});
 
 // Insert emoji into textarea
 emojiPicker.addEventListener("emoji-click", (event) => {
   descriptionInput.value += event.detail.unicode;
 });
 
-// Handle house form submit
-addForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+// Load saved houses on page load
+(function loadHouses() {
+  const savedHouses = JSON.parse(localStorage.getItem("houses")) || [];
+  savedHouses.forEach(houselist);
+})();
 
-  const urlImage = document.getElementById("imageUrl").value;
-  const DescImage = descriptionInput.value;
 
-  // Create and render new house
-  const newHouse = { image: urlImage, description: DescImage };
-   houselist(newHouse);
-
-  // Save to localStorage
-  const savehouses = JSON.parse(localStorage.getItem("houses")) || [];
-  savehouses.push(newHouse);
-  localStorage.setItem("houses", JSON.stringify(savehouses));
-
-  addForm.reset();
-});
-
-// Initial load
-loadHouses();
