@@ -58,41 +58,44 @@ if (registerForm) {
 
 const bookingForm = document.getElementById("bookingForm");
 
-if (bookingForm) {
-  const nameInput = document.getElementById("name");
-  const startDateInput = document.getElementById("start-date");
-  const endDateInput = document.getElementById("end-date");
-  const roomInput = document.getElementById("room");
+// if (bookingForm) {
+//   const nameInput = document.getElementById("name");
+//   const startDateInput = document.getElementById("start-date");
+//   const endDateInput = document.getElementById("end-date");
+//   const roomInput = document.getElementById("room");
 
-  bookingForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+//   bookingForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     console.log("nameInput", nameInput.value);
+//     console.log("startDateInput", startDateInput.value);
+//     console.log("endDateInput", endDateInput.value);
+//     console.log("roomInput", roomInput.val);
+//     if (!nameInput || !startDateInput || !endDateInput || !roomInput) {
+//       console.error("Booking inputs not found!");
+//       return;
+//     }
 
-    if (!nameInput || !startDateInput || !endDateInput || !roomInput) {
-      console.error("Booking inputs not found!");
-      return;
-    }
+//     const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
-    const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+//     const newBooking = {
+//       name: nameInput.value,
+//       startDate: startDateInput.value,
+//       endDate: endDateInput.value,
+//       room: roomInput.value,
+//     };
 
-    const newBooking = {
-      name: nameInput.value,
-      startDate: startDateInput.value,
-      endDate: endDateInput.value,
-      room: roomInput.value,
-    };
+//     bookings.push(newBooking);
+//     localStorage.setItem("bookings", JSON.stringify(bookings));
 
-    bookings.push(newBooking);
-    localStorage.setItem("bookings", JSON.stringify(bookings));
+//     alert(`Your booking is successful!
+// Name: ${nameInput.value}
+// Start Date: ${startDateInput.value}
+// End Date: ${endDateInput.value}
+// Room: ${roomInput.value}`);
 
-    alert(`Your booking is successful!
-Name: ${nameInput.value}
-Start Date: ${startDateInput.value}
-End Date: ${endDateInput.value}
-Room: ${roomInput.value}`);
-
-    bookingForm.reset();
-  });
-} //("service_putdn59", "template_2serv55",
+//     bookingForm.reset();
+//   });
+// } //("service_putdn59", "template_2serv55",
 
 document.getElementById("bookingForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -101,6 +104,16 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
   const startDate = document.getElementById("start-date").value;
   const endDate = document.getElementById("end-date").value;
   const room = document.getElementById("room").value;
+  console.log(name);
+  console.log(startDate);
+  console.log(endDate);
+  console.log(room);
+  if (!name || !startDate || !endDate || !room) {
+    alert(
+      "⚠️ Please fill in all required fields (Name, Start Date, End Date, Room)."
+    );
+    return; // stop here
+  }
 
   emailjs
     .send("service_putdn59", "template_2serv55", {
@@ -121,7 +134,7 @@ const urlInput = document.getElementById("imageUrl");
 const descriptionInput = document.getElementById("description");
 const emojiPicker = document.getElementById("emojiPicker");
 const rentalHouse = document.querySelector(".houses");
-const apply = document.querySelectorAll("#apply");
+const apply = document.querySelectorAll(".apply");
 
 // Render a house card
 function houselist(house) {
@@ -139,14 +152,7 @@ function houselist(house) {
   const btn = document.createElement("button");
   btn.classList.add("house-desc");
   btn.textContent = "Apply Now";
-  applyButtons.forEach((button) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      alert("Thank you for the application! You will receive information about the object soon.");
-        
-    })
-  })
-  
+
   // Select all buttons with the class "apply"
   const applyButtons = document.querySelectorAll(".apply");
 
@@ -201,5 +207,3 @@ emojiPicker.addEventListener("emoji-click", (event) => {
   const savedHouses = JSON.parse(localStorage.getItem("houses")) || [];
   savedHouses.forEach(houselist);
 })();
-
-
